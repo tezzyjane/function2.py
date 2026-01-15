@@ -12,28 +12,35 @@ def divide(a,b):
       return "division by zero not allowed"
    return a/b
 print(divide(15,3))
+#area of rectangle
 def area_rect(length,width):
    return length*width
 print(area_rect(20,4))
+#area of circle
 def area_circle(radius):
    pi=3.1142
    return pi*radius*radius
 print(area_circle(6))
+#simple interest calculator
 def simple_interest(principal,rate,time):
    return principal*rate*time*0.01
 print(simple_interest(10000,5,2))
+#average of numbers
 def average(a,b,c):
    return (a+b+c)/3
 print(average(12,6,8))
+#even odd checker
 def even_odd(number):
  if number % 2==0:
   return "even" 
  else:
       return "odd"
 print(even_odd(6))
+#factorial calculator
 def power_number(base,exponent):
    return base**exponent
 print(power_number(2,4))
+#commission calculator
 def commission(sales,rate):
  if sales>=100000:
       print("Excellent sales")
@@ -48,9 +55,25 @@ def commission(sales,rate):
 print(commission(150000,10))
 print(commission(75000,7))
 print(commission(30000,5))
+#4.	Age Category Checker 
+def age_category(birth_year,current_year,category,remarks):
+   age=current_year-birth_year
+   if age>=0 and age<=12:
+        print("child")
+        return age
+   elif age>=13 and age<=19:
+        print("teenager")
+        return age
+   elif age>=20 and age<=59:
+        print("adult")
+        return age
+   else:
+        print("senior citizen")
+        return age
+birth_year=int(input("enter the year of birth:\n"))
+print(age_category(birth_year=birth_year,current_year=2026,category="category",remarks="remarks"))
 
-
-
+#salary calculator
 def salary(PAYE,NHIF,NSSF,NET_SALARY):
    if NET_SALARY >=80000:
          print("high income earner")
@@ -64,7 +87,7 @@ def salary(PAYE,NHIF,NSSF,NET_SALARY):
 print(salary(8000,1500,1000,80000))  
 print(salary(3000,1500,1000,30000))
 print(salary(2000,1500,1000,20000))
-
+#student grade calculator
 def grade(marks,Grade):
     if marks>=70:
         print("excellent")
@@ -87,20 +110,12 @@ print(grade(50,"C"))
 print(grade(45,"D"))
 print(grade(30,"F"))    
     #electricity bill calculator
-def electricity_bill(units,rate,bill):
+def electricity_bill(units,rate):
+        bill=units*rate
         if bill>=10000:
          print("high usage")
         else:
          print("normal usage")
-        if units==50:
-            return units*rate
-        elif units==100:
-            return units*rate
-        elif units>=150:
-            return units*rate
-        else:
-            return units*rate
-        
 print(electricity_bill(65,20))
 print(electricity_bill(120,25))
 print(electricity_bill(200,30))
@@ -136,13 +151,13 @@ print(bmi_calculator(27,2,"bmi","overweight"))
 print(bmi_calculator(35,4,"bmi","obese"))
 
 #examination pass eligibility
-def results(subject,marks,average_mark,result):
-        average_mark=marks/subject
+def results(sub1,sub2,sub3):
+        average_mark=(sub1+sub2+sub3)/3
         if average_mark>=50:
             print("pass")
-            return marks/subject
+            return average_mark
         else:
             print("fail")
-            return marks/subject
-print(results(3,240))
-print(results(3,120))        
+            return average_mark
+print(results(20,40,60))
+print(results(50,60,70))        
